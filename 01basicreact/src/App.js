@@ -1,7 +1,11 @@
 
+import Chai  from "./Chai";
 function App() {
   return (
-    <h1>Learn React</h1>
+      <>
+        <h1>this is akshay</h1>
+        <Chai/>
+      </>
   );
 }
 

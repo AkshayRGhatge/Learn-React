@@ -1,10 +1,12 @@
 
+import Chai from './chai.jsx'
+
 function App() {
  
 
   return (
     <h1>
-     Learn React with Vite
+     <Chai/>
     </h1>
   )
 }
