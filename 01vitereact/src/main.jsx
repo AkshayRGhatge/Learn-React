@@ -12,16 +12,16 @@ import App from './App.jsx'
 //     children: 'Click me to visit Google'
 // }
 
-//  const anotherElement=(
-//     <a href='https://google.com' target="_blank"> Visit Google Link</a>
-//  )
+// const anotherElement=(
+//   <a href='https://google.com' target="_blank"> Visit Google Link</a>
+// )
 
 const username="AKshay";
 const reactElement=React.createElement(
     'a',
     {href: 'https://google.com',target: '_blank'},
-   'Test',
-   username
+    'Test',
+    username
 )
 
 ReactDOM.createRoot(document.getElementById('root')).render(
