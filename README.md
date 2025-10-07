@@ -16,3 +16,4 @@
 2. React, create a tree structure and inject in the DOM.
 3. Evaluated expression can be use to return variable in the JSX function {}
 4. Babel is the tool that converts JSX into React.createElement() calls behind the scenes. JSX is not valid JavaScript on its own, so Babel acts as a transpiler that transforms JSX into something browsers can understand.
+5. React hooks use for updating the DOM element for instance counter value, need to update at multiple spots at that time we have to use hooks otherwise in plain js we have to get the id, set the text content all over the code.
