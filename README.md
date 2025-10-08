@@ -22,3 +22,8 @@
 8. In a UI, it's not necessary for every update to be applied immediately; in fact, doing so can be wasteful, causing frames to drop and degrading the user experience.
 9. Different types of updates have different priorities — an animation update needs to complete more quickly than, say, an update from a data store.
 10. A push-based approach requires the app (you, the programmer) to decide how to schedule work. A pull-based approach allows the framework (React) to be smart and make those decisions for you.
+11. React-fiber primary goal is to enable React to take advantage of scheduling, we need to able to
+    - Pause work and come back later
+    - Assign priority to work
+    - Reuse previously completed work
+    - Abort work if no longer needed
