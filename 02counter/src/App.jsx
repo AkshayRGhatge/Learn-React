@@ -7,9 +7,8 @@ function App() {
   
 
   const addValue=()=>{
-      console.log("vlaue: " + Math.random())
       setCounter(counter+1);
-  };
+  }; 
 
   const removeValue=()=>{
       setCounter(counter-1);
