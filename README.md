@@ -31,3 +31,7 @@
 13. useEffect
 14. useRef
 15. useCallback
+16. useId : useId is a React Hook for generating unique IDs that can be passed to accessibility attributes.
+17. Use starting as capital letter for the component
+18. Rememeber to use the key in the React loops for performance
+19. For multiple components best practise is to create index.js and import it all the components in the js file and use js file in the jsx file to get the components
