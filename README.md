@@ -27,3 +27,7 @@
     - Assign priority to work
     - Reuse previously completed work
     - Abort work if no longer needed
+12. useState
+13. useEffect
+14. useRef
+15. useCallback
