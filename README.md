@@ -35,3 +35,7 @@
 17. Use starting as capital letter for the component
 18. Rememeber to use the key in the React loops for performance
 19. For multiple components best practise is to create index.js and import it all the components in the js file and use js file in the jsx file to get the components
+20. React-Router-Dom: a tag vs link - a tag use to navigate to another source page and reload the DOM, which in turn rewriting DOM structure where as the link avoid reloading of the screen
+21. Nav-link: <NavLink> is a wrapper around <Link> that automatically applies styles or classes when the link matches the current URL.<NavLink> in React Router is a powerful component for building navigation menus that highlight the active route.
+22. Router-dom Outlet: properties use for rendering dynamic page in the react, for instance Home , footer remain static but between the Header and Footer component we have outlet, that is dynamic
+23. Router-dom createBrowserRouter is use to create router, method takes an array.
