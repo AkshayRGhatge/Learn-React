@@ -4,8 +4,9 @@ export default function User()
 {
     const {userid} = useParams()
     return(
-        <>
-        User: {userid}
-        </>
+        <div className='text-center m-4 bg-gray-500 text-white p-4 text-3xl'> 
+          User: {userid}
+        </div>
+      
     )
 }

@@ -39,3 +39,4 @@
 21. Nav-link: <NavLink> is a wrapper around <Link> that automatically applies styles or classes when the link matches the current URL.<NavLink> in React Router is a powerful component for building navigation menus that highlight the active route.
 22. Router-dom Outlet: properties use for rendering dynamic page in the react, for instance Home , footer remain static but between the Header and Footer component we have outlet, that is dynamic
 23. Router-dom createBrowserRouter is use to create router, method takes an array.
+24. loader: use to make the call before going to the page for instance, making an api call on move hover it will retrieve the data and cache it
