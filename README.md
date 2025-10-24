@@ -44,4 +44,4 @@
     Part 1:
     Create context (React.createContext()) store in the variable and export it - JS file
     Part 2:
-    Create provider - JSX file
+    Create provider - JSX file, it is like a wrapper all the child elements can access to the context
