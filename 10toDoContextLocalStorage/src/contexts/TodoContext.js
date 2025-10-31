@@ -20,7 +20,7 @@ export const TodoContext= createContext({
 export const TodoProvider=TodoContext.Provider;
 
 //Make custom hook to avail the context easily
-export const useToDoContext=()=>{
+export const useTodoContext=()=>{
     return useContext(TodoContext);
 }
 
