@@ -45,3 +45,10 @@
     Create context (React.createContext()) store in the variable and export it - JS file
     Part 2:
     Create provider - JSX file, it is like a wrapper all the child elements can access to the context
+
+## Redux & Redux-toolkit
+
+1. Store : kind of global variable
+2. Reducers: which store we need to change, how to change, which part
+3. useSelector: select value from store
+4. useDispatch: value to send to store
