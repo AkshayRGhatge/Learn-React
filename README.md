@@ -48,7 +48,26 @@
 
 ## Redux & Redux-toolkit
 
-1. Store : kind of global variable
+1. Store : kind of global variable/single source of truth
 2. Reducers: which store we need to change, how to change, which part
 3. useSelector: select value from store
 4. useDispatch: value to send to store
+
+### Store
+
+#### How to create store
+
+    To Create store created folder under src/app/store.js (any folder naming convention) need to import 'configureStore' from '@reduxjs/toolkit' which takes an object
+
+#### Reducer
+
+     To Create reducer we are going to use React Redux toolkit syntax create folder under src/features/todo/todoSlice.js need to import 'createSlice' from '@reduxjs/toolkit'
+
+    Contains: name , initial state and reducers
+    Reducers do have property and function which do have access for 1. state and 2. action
+    1. 'state' indicate current state for instance see the initalState which value we are on it
+    2. 'action' indicate value use for the function
+
+#### useSelector
+
+#### useDispatch
