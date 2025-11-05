@@ -37,3 +37,9 @@ export const todoSlice=createSlice({
     }
 
 })
+
+//Individual reducer export use in components
+export const {addTodo,removeTodo,updateTodo} = todoSlice.actions;
+
+//need to export the whole reducers for the store
+export default todoSlice.reducer;
