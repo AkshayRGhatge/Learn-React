@@ -70,4 +70,10 @@
 
 #### useSelector
 
+    To create useSelector import useDispatch from redux-toolkit,
+    Get the value from the store
+
 #### useDispatch
+
+    To create useDispatch import useDispatch from redux-toolkit,
+    useDispatch use the reducers and update the store
