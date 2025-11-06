@@ -48,6 +48,8 @@
 
 ## Redux & Redux-toolkit
 
+Redux is core library whereas React-Redux is implementation, wiring react and redux.
+
 1. Store : kind of global variable/single source of truth
 2. Reducers: which store we need to change, how to change, which part
 3. useSelector: select value from store
