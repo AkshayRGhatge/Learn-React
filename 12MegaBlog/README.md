@@ -14,3 +14,21 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+# Steps
+
+## Install following
+
+1.  "@reduxjs/toolkit"
+2.  "@tinymce/tinymce-react"
+3.  "appwrite"
+4.  "html-react-parser"
+5.  "react"
+6.  "react-dom"
+7.  "react-hook-form"
+8.  "react-redux"
+9.  "react-router-dom"
+
+## Create .env file
+
+Note: In the appwrite need to create a table and bucket and update the permissions for each
