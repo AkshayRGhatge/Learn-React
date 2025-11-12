@@ -29,6 +29,18 @@ If you are developing a production application, we recommend using TypeScript wi
 8.  "react-redux"
 9.  "react-router-dom"
 
-## Create .env file
+## Make necessary changes in the appwrite
+
+- Create database, bucket etc and get the id
 
 Note: In the appwrite need to create a table and bucket and update the permissions for each
+
+## Create .env file
+
+- Make sure to ignore env file and create sample env file
+
+## Create config.js
+
+- Resolve an issue where we can declare all the env variables with the datatype string also one place holder to declare all the env variable and export the conf
+
+## Service see the src/appwrite/auth.js
