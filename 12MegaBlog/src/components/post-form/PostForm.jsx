@@ -19,29 +19,41 @@ export default function PostForm({ post }) {
     const userData = useSelector((state) => state.auth.userData);
 
     const submit = async (data) => {
+        //Post edit scenario
         if (post) {
+
+            //Upload Image
             const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
 
+            //Delete existing image
             if (file) {
                 appwriteService.deleteFile(post.featuredImage);
             }
 
+            //Update the post with new image
             const dbPost = await appwriteService.updatePost(post.$id, {
                 ...data,
                 featuredImage: file ? file.$id : undefined,
             });
 
+            //Redirect once post is updated
             if (dbPost) {
                 navigate(`/post/${dbPost.$id}`);
             }
         } else {
+            //add Post scenario
+
+            //Add new image in appwrite
             const file = await appwriteService.uploadFile(data.image[0]);
 
             if (file) {
                 const fileId = file.$id;
                 data.featuredImage = fileId;
+
+                //Create new post 
                 const dbPost = await appwriteService.createPost({ ...data, userId: userData.$id });
 
+                //navigate
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
                 }
@@ -63,11 +75,12 @@ export default function PostForm({ post }) {
     React.useEffect(() => {
         const subscription = watch((value, { name }) => {
             if (name === "title") {
-                setValue("slug", slugTransform(value.title), { shouldValidate: true });
+                setValue("slug", slugTransform(value.title), { shouldValidate: true }); //slug first param here is the input field name 
+
             }
         });
 
-        return () => subscription.unsubscribe();
+        return () => subscription.unsubscribe();//for better performance won't keep calling 
     }, [watch, slugTransform, setValue]);
 
     return (
