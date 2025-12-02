@@ -36,7 +36,7 @@ export class Service
         catch(error)
         {
             console.log("Appwrite service :: createPost :: error",error)
-            throw error;
+            
         }
     }
 
@@ -55,12 +55,15 @@ export class Service
                         featuredImage,
                         status
                     }
+				 
                 )
+						 
+																		 
         }
         catch(error)
         {
               console.log("Appwrite service :: updatePost :: error",error)
-            throw error;
+            
         }
     }
 
@@ -76,6 +79,9 @@ export class Service
                    
                 )
             return true;
+						 
+																		 
+						
         }
         catch(error)
         {
@@ -85,7 +91,7 @@ export class Service
     }
 
     //Get the single document
-    async getDocument(slug)
+    async getPost(slug)
     {
         try
         {
@@ -95,6 +101,8 @@ export class Service
                     slug,
                    
                 )
+						 
+																	  
             return true;
         }
         catch(error)
@@ -114,6 +122,8 @@ export class Service
                     conf.appwriteDatabaseId,
                     conf.appwriteCollectionId,
                     queries,
+				
+
                 )
         }
         catch(error)
@@ -122,6 +132,8 @@ export class Service
             return false;
         }
     }
+
+						  
 
     //file upload service
     async uploadFile(file)
@@ -134,6 +146,8 @@ export class Service
                 file
             )
         
+																		 
+						
         }
          catch(error)
         {
@@ -165,9 +179,12 @@ export class Service
     {
         return this.bucket.getFilePreview,
         fileId
+				  
+		 
     } 
 }
 
 const service = new Service();
 
+							 
 export default service;

@@ -10,7 +10,8 @@ export class AuthService {
         this.client
             .setEndpoint(conf.appwriteUrl)
             .setProject(conf.appwriteProjectId);
-        this.account = new Account(this.client);     
+        this.account = new Account(this.client);
+            
     }
 
     async createAccount({email, password, name}) {
@@ -23,16 +24,19 @@ export class AuthService {
                return  userAccount;
             }
         } catch (error) {
-            console.log("Appwrite service :: createAccount :: error",error)
+			console.log("Appwrite service :: createAccount :: error",error)														   
             throw error;
         }
     }
 
     async login({email, password}) {
-        // eslint-disable-next-line no-useless-catch
+													
         try {
-            return await this.account.createEmailPasswordSession(email, password);
+            const session = await this.account.createEmailPasswordSession(email, password);
+            console.log("Session:", session);
+            return session
         } catch (error) {
+            console.log("Appwrite serive :: login :: error", error);
             throw error;
         }
     }
@@ -60,4 +64,3 @@ export class AuthService {
 const authService = new AuthService();
 
 export default authService
-
