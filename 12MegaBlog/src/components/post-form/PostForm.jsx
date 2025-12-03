@@ -19,6 +19,7 @@ export default function PostForm({ post }) {
     const userData = useSelector((state) => state.auth?.userData);
 
     const submit = async (data) => {
+        console.log('PostForm submit called, data:', data);
         //Post edit scenario
         if (post) {
 
@@ -84,7 +85,7 @@ export default function PostForm({ post }) {
     }, [watch, slugTransform, setValue]);
 
     return (
-        <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
+        <form onSubmit={handleSubmit(submit, (errors) => { console.log('validation errors', errors); })} className="flex flex-wrap">
             <div className="w-2/3 px-2">
                 <Input
                     label="Title :"

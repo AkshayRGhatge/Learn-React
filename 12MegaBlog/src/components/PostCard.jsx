@@ -17,4 +17,4 @@ function PostCard({$id,title,featuredImage})
         </Link>
     )
 }
-export default React.forwardRef(PostCard)
+export default PostCard;
