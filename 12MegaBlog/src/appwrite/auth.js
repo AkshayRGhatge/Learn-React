@@ -51,12 +51,19 @@ export class AuthService {
         return null;
     }
 
-    async logout() {
+    async logout(sessionId) {
 
         try {
-            await this.account.deleteSessions();
+            if (sessionId) {
+                // delete specific session by id (works even if cookie isn't sent)
+                await this.account.deleteSession(sessionId);
+            } else {
+                // fallback: delete all sessions for current user (requires cookie)
+                await this.account.deleteSessions();
+            }
         } catch (error) {
             console.log("Appwrite serive :: logout :: error", error);
+            // Session may already be deleted or CORS issue - this is ok
         }
     }
 }

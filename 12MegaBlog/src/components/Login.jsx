@@ -22,7 +22,8 @@ function Login()
                 const userData=await authService.getCurrentUser();
                 if(userData)
                 {
-                    dispatch(authLogin(userData));
+                    // store session id in redux for logout fallback
+                    dispatch(authLogin({ userData, sessionId: session.$id }));
                     navigate("/");
                 }
             }
