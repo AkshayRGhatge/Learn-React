@@ -95,15 +95,13 @@ export class Service
     {
         try
         {
-             await this.databases.getDocument(
+             return await this.databases.getDocument(
                     conf.appwriteDatabaseId,
                     conf.appwriteCollectionId,
                     slug,
                    
                 )
-						 
-																	  
-            return true;
+										
         }
         catch(error)
         {
@@ -177,9 +175,7 @@ export class Service
     //file preview
     getFilePreview(fileId)
     {
-        return this.bucket.getFilePreview,
-        fileId
-				  
+        return this.bucket.getFilePreview(conf.appwriteBucketId,fileId)		  
 		 
     } 
 }
